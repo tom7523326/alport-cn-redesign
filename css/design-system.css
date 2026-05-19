@@ -1092,8 +1092,25 @@ body.menu-open { overflow: hidden; touch-action: none; }
    ============================================================ */
 @media (max-width: 640px) {
   :root { --nav-h: 60px; }
+  html, body { overflow-x: hidden; }
+  body { max-width: 100vw; }
   .container { padding-inline: var(--sp-4); }
   .section { padding-block: clamp(48px, 12vw, 72px); }
+
+  /* Eyebrow: 防止溢出 */
+  .eyebrow {
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 11px;
+    letter-spacing: .08em;
+    gap: 8px;
+    max-width: 100%;
+    text-align: center;
+  }
+  .eyebrow::before { width: 18px; }
+
+  /* 通用文本不溢出 */
+  h1, h2, h3, p { overflow-wrap: anywhere; word-break: break-word; }
 
   /* Brand: 收紧 logo 与英文副标 */
   .nav-brand-en { display: none; }

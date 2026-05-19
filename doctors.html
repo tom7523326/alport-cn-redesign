@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>医患平台 · 找专家 / 推荐医院 / 咨询会 · 中国 Alport 综合征家长协会</title>
+<meta name="description" content="Alport 医患平台：聚合国内权威专家与诊疗中心，提供线上咨询会、专家提问墙、绿色通道，让每位患者都能找到对的医生。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;600;700&family=Noto+Serif+SC:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/design-system.css?v=2">
+</head>
+<body data-page="doctors">
+
+<div data-include="header"></div>
+
+<section class="page-head">
+  <div class="container">
+    <nav class="breadcrumb"><a href="index.html">首页</a> · 医患平台</nav>
+    <span class="eyebrow">DOCTOR-PATIENT BRIDGE</span>
+    <h1 style="margin-top:12px">医患平台</h1>
+    <p>「每一位患者的声音都值得被听见。」我们用 11 年时间，把分散在各地的 Alport 领域专家、诊疗中心、线上答疑会汇聚在一起 —— 让你不再「找不到医生」。</p>
+    <div style="display:flex;gap:12px;margin-top:24px;flex-wrap:wrap">
+      <a href="#find" class="btn btn-primary">查找专家</a>
+      <a href="#hospitals" class="btn btn-outline">推荐医院</a>
+      <a href="#online" class="btn btn-outline">线上咨询会</a>
+      <a href="#qa" class="btn btn-warm">提交咨询</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== 找专家 ============================== -->
+<section class="section" id="find">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">FIND A SPECIALIST</span>
+      <h2>Alport 领域权威专家</h2>
+      <p>下列专家均与协会建立长期合作，参与过协会主办或共同主办的科普讲座、临床研究与国际会议。</p>
+    </div>
+
+    <div class="tabs reveal" data-tab-group="region">
+      <button data-tab="all" class="is-active">全部</button>
+      <button data-tab="bj">北京</button>
+      <button data-tab="sh">上海</button>
+      <button data-tab="other">其他地区</button>
+      <button data-tab="kid">儿科</button>
+      <button data-tab="adult">成人肾内</button>
+      <button data-tab="transplant">肾移植</button>
+    </div>
+
+    <div class="grid grid-2 reveal" data-tab-panel="all">
+
+      <div class="doctor-card">
+        <div class="doctor-avatar">丁</div>
+        <div class="doctor-info">
+          <h3>丁 洁 教授</h3>
+          <div class="doctor-title">北京大学第一医院 · 儿科 · 主任医师 / 博导</div>
+          <p style="font-size:14px;color:var(--color-ink-600);margin:0 0 12px">国内 Alport 综合征研究领军人物，主持开展国内首个 Alport 临床队列与基因治疗临床前研究。协会十二年合作伙伴。</p>
+          <div class="doctor-tags">
+            <span class="tag">Alport 综合征</span>
+            <span class="tag">儿童肾病</span>
+            <span class="tag tag-life">遗传咨询</span>
+            <span class="tag tag-warm">研究牵头人</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="doctor-card">
+        <div class="doctor-avatar">沈</div>
+        <div class="doctor-info">
+          <h3>沈 颖 教授</h3>
+          <div class="doctor-title">北京大学第一医院 · 儿科</div>
+          <p style="font-size:14px;color:var(--color-ink-600);margin:0 0 12px">儿童 Alport 综合征长期随访与多学科管理专家。2025 年北京国际研讨会学术日讲者之一。</p>
+          <div class="doctor-tags">
+            <span class="tag">儿童肾病</span>
+            <span class="tag tag-life">长期随访</span>
+            <span class="tag">多学科管理</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="doctor-card">
+        <div class="doctor-avatar">周</div>
+        <div class="doctor-info">
+          <h3>周绪杰 主任医师</h3>
+          <div class="doctor-title">北京大学第一医院 · 肾内科</div>
+          <p style="font-size:14px;color:var(--color-ink-600);margin:0 0 12px">主持「Smart 研究」临床试验（SGLT2 抑制剂联合非奈利酮方案）。门诊：周一、周二下午。</p>
+          <div class="doctor-tags">
+            <span class="tag tag-warm">临床试验入组</span>
+            <span class="tag">成人肾内</span>
+            <span class="tag">基因检测解读</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="doctor-card">
+        <div class="doctor-avatar">李</div>
+        <div class="doctor-info">
+          <h3>李 阳 副主任医师</h3>
+          <div class="doctor-title">北京大学第一医院 · 肾内科</div>
+          <p style="font-size:14px;color:var(--color-ink-600);margin:0 0 12px">2025 年 4 月「Alport 临床试验情况介绍及答疑」主讲，269 位病友云端聆听。</p>
+          <div class="doctor-tags">
+            <span class="tag">临床试验</span>
+            <span class="tag">用药管理</span>
+            <span class="tag">规范诊疗</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="doctor-card">
+        <div class="doctor-avatar" style="background:linear-gradient(135deg,#FED7AA,#F97316);color:var(--color-warm-700)">林</div>
+        <div class="doctor-info">
+          <h3>林芙君 主任医师</h3>
+          <div class="doctor-title">上海交通大学医学院附属新华医院 · 肾脏内科</div>
+          <p style="font-size:14px;color:var(--color-ink-600);margin:0 0 12px">2025 国际罕见病日 Alport 综合征医患交流会主讲，227 位患者家属参与。擅长疾病认知教育、多学科管理与生活指导。</p>
+          <div class="doctor-tags">
+            <span class="tag">成人肾内</span>
+            <span class="tag tag-life">多学科管理</span>
+            <span class="tag">康复方案</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="doctor-card">
+        <div class="doctor-avatar" style="background:linear-gradient(135deg,#FED7AA,#F97316);color:var(--color-warm-700)">饶</div>
+        <div class="doctor-info">
+          <h3>饶 佳 主任医师</h3>
+          <div class="doctor-title">上海交通大学医学院附属新华医院 · 肾脏内科</div>
+          <p style="font-size:14px;color:var(--color-ink-600);margin:0 0 12px">与林芙君主任搭档，2025 年医患交流会四大维度（疾病认知 / 多学科管理 / 治疗策略 / 心理支持）主讲人。</p>
+          <div class="doctor-tags">
+            <span class="tag">成人肾内</span>
+            <span class="tag">心理支持</span>
+            <span class="tag">用药方案</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="doctor-card">
+        <div class="doctor-avatar" style="background:linear-gradient(135deg,#A7F3D0,#10B981);color:var(--color-life-700)">林</div>
+        <div class="doctor-info">
+          <h3>林 俊 医生 / 团队</h3>
+          <div class="doctor-title">首都医科大学附属北京友谊医院 · 泌尿外科 / 肾移植中心</div>
+          <p style="font-size:14px;color:var(--color-ink-600);margin:0 0 12px">主持「Alport 综合征肾移植患者随访调研」，260 位术后病友参与。覆盖免疫抑制剂规范、饮食、复查全周期。</p>
+          <div class="doctor-tags">
+            <span class="tag tag-life">肾移植</span>
+            <span class="tag">术后随访</span>
+            <span class="tag">长期管理</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="doctor-card">
+        <div class="doctor-avatar">王</div>
+        <div class="doctor-info">
+          <h3>王 芳 教授</h3>
+          <div class="doctor-title">北京大学第一医院</div>
+          <p style="font-size:14px;color:var(--color-ink-600);margin:0 0 12px">鼓励患者规范参与科研以获得更多治疗机会，2025 中德研讨会本土实践分享专家。</p>
+          <div class="doctor-tags">
+            <span class="tag">科研协调</span>
+            <span class="tag">规范治疗</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="doctor-card">
+        <div class="doctor-avatar">钟</div>
+        <div class="doctor-info">
+          <h3>钟旭辉 教授</h3>
+          <div class="doctor-title">北京大学第一医院 · 儿科</div>
+          <p style="font-size:14px;color:var(--color-ink-600);margin:0 0 12px">2025 中德研讨会专家。擅长用通俗语言解读透析与肾移植适配场景，缓解进展期家庭焦虑。</p>
+          <div class="doctor-tags">
+            <span class="tag">透析咨询</span>
+            <span class="tag tag-life">肾移植适配</span>
+            <span class="tag">家庭咨询</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="doctor-card">
+        <div class="doctor-avatar">张</div>
+        <div class="doctor-info">
+          <h3>张琰琴 副研究员</h3>
+          <div class="doctor-title">北京大学第一医院</div>
+          <p style="font-size:14px;color:var(--color-ink-600);margin:0 0 12px">妊娠期 Alport 患者管理与基因携带者咨询专家。「稳定期每 3 个月复查即可，别让焦虑消耗家庭能量」。</p>
+          <div class="doctor-tags">
+            <span class="tag">妊娠期管理</span>
+            <span class="tag tag-life">遗传咨询</span>
+            <span class="tag">心理</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="doctor-card">
+        <div class="doctor-avatar" style="background:linear-gradient(135deg,#DBEAFE,#3B82F6);color:#fff">陈</div>
+        <div class="doctor-info">
+          <h3>陈宇鹏 教授</h3>
+          <div class="doctor-title">研究型科学家 · 基因校正技术</div>
+          <p style="font-size:14px;color:var(--color-ink-600);margin:0 0 12px">2025 北京国际研讨会重磅成果：基因校正技术在小鼠模型中成功恢复 IV 型胶原蛋白功能，为基因治疗带来曙光。</p>
+          <div class="doctor-tags">
+            <span class="tag tag-life">基因治疗</span>
+            <span class="tag">临床前研究</span>
+            <span class="tag tag-warm">研究牵头人</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="doctor-card">
+        <div class="doctor-avatar" style="background:linear-gradient(135deg,#EFF6FF,#1E40AF);color:#fff">JS</div>
+        <div class="doctor-info">
+          <h3>Judy Savige 教授</h3>
+          <div class="doctor-title">澳大利亚墨尔本大学 · 国际 Alport 联盟核心专家</div>
+          <p style="font-size:14px;color:var(--color-ink-600);margin:0 0 12px">2025 北京研讨会主旨讲者，解析 Alport 综合征遗传机制。国际 Alport 综合征诊疗共识起草人之一。</p>
+          <div class="doctor-tags">
+            <span class="tag">国际专家</span>
+            <span class="tag tag-life">遗传机制</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================== 推荐医院 ============================== -->
+<section class="section bg-soft" id="hospitals">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">CARE CENTERS</span>
+      <h2>推荐诊疗中心</h2>
+      <p>以下医院在 Alport 综合征诊疗、基因检测、肾移植或多学科管理方面具备丰富经验，与协会有长期合作记录。</p>
+    </div>
+
+    <div class="grid grid-2 reveal">
+      <div class="card card-elevated">
+        <div style="display:flex;gap:16px;align-items:start">
+          <div class="card-icon" style="font-size:18px;font-weight:800">京1</div>
+          <div>
+            <h3 style="margin:0 0 4px;font-size:18px">北京大学第一医院</h3>
+            <div class="muted" style="font-size:14px">北京市西城区西什库大街 8 号</div>
+          </div>
+        </div>
+        <div class="mt-4" style="display:flex;flex-wrap:wrap;gap:6px">
+          <span class="tag">儿童肾病</span>
+          <span class="tag">成人肾内</span>
+          <span class="tag tag-life">基因检测</span>
+          <span class="tag tag-warm">临床试验中心</span>
+          <span class="tag">多学科会诊</span>
+        </div>
+        <p style="font-size:14px;color:var(--color-ink-600);margin-top:16px">国内最大的 Alport 综合征诊疗与研究中心，丁洁教授团队所在地。开展国内主要 Alport 临床试验。</p>
+      </div>
+
+      <div class="card card-elevated">
+        <div style="display:flex;gap:16px;align-items:start">
+          <div class="card-icon warm" style="font-size:16px;font-weight:800">新华</div>
+          <div>
+            <h3 style="margin:0 0 4px;font-size:18px">上海交通大学医学院附属新华医院</h3>
+            <div class="muted" style="font-size:14px">上海市杨浦区控江路 1665 号</div>
+          </div>
+        </div>
+        <div class="mt-4" style="display:flex;flex-wrap:wrap;gap:6px">
+          <span class="tag">成人肾内</span>
+          <span class="tag tag-life">基因检测</span>
+          <span class="tag">多学科管理</span>
+          <span class="tag">心理支持</span>
+        </div>
+        <p style="font-size:14px;color:var(--color-ink-600);margin-top:16px">华东地区 Alport 综合征诊疗中心，林芙君、饶佳团队，擅长成人长期管理与多学科整合方案。</p>
+      </div>
+
+      <div class="card card-elevated">
+        <div style="display:flex;gap:16px;align-items:start">
+          <div class="card-icon life" style="font-size:14px;font-weight:800">友谊</div>
+          <div>
+            <h3 style="margin:0 0 4px;font-size:18px">首都医科大学附属北京友谊医院</h3>
+            <div class="muted" style="font-size:14px">北京市西城区永安路 95 号</div>
+          </div>
+        </div>
+        <div class="mt-4" style="display:flex;flex-wrap:wrap;gap:6px">
+          <span class="tag tag-life">肾移植</span>
+          <span class="tag">术后随访</span>
+          <span class="tag">免疫抑制剂管理</span>
+        </div>
+        <p style="font-size:14px;color:var(--color-ink-600);margin-top:16px">林俊医生团队主持「Alport 肾移植患者随访调研」，是终末期 Alport 患者首选移植中心之一。</p>
+      </div>
+
+      <div class="card card-elevated">
+        <div style="display:flex;gap:16px;align-items:start">
+          <div class="card-icon" style="font-size:14px;font-weight:800">儿研</div>
+          <div>
+            <h3 style="margin:0 0 4px;font-size:18px">北京儿童医院（首都医科大学附属）</h3>
+            <div class="muted" style="font-size:14px">北京市西城区南礼士路 56 号</div>
+          </div>
+        </div>
+        <div class="mt-4" style="display:flex;flex-wrap:wrap;gap:6px">
+          <span class="tag">儿童肾病</span>
+          <span class="tag">罕见病分会</span>
+          <span class="tag tag-life">遗传咨询</span>
+        </div>
+        <p style="font-size:14px;color:var(--color-ink-600);margin-top:16px">儿童罕见病多学科诊疗能力强，与协会十二年合作伙伴，年度科普答疑常驻合作医院。</p>
+      </div>
+
+      <div class="card card-elevated">
+        <div style="display:flex;gap:16px;align-items:start">
+          <div class="card-icon warm" style="font-size:13px;font-weight:800">港大</div>
+          <div>
+            <h3 style="margin:0 0 4px;font-size:18px">香港大学深圳医院</h3>
+            <div class="muted" style="font-size:14px">深圳市福田区海园一路 1 号</div>
+          </div>
+        </div>
+        <div class="mt-4" style="display:flex;flex-wrap:wrap;gap:6px">
+          <span class="tag">多学科义诊</span>
+          <span class="tag">罕见病关爱</span>
+        </div>
+        <p style="font-size:14px;color:var(--color-ink-600);margin-top:16px">国际罕见病日「不止罕见」公益活动主办方，协会华南地区核心合作伙伴。</p>
+      </div>
+
+      <div class="card card-elevated">
+        <div style="display:flex;gap:16px;align-items:start">
+          <div class="card-icon" style="font-size:13px;font-weight:800">+</div>
+          <div>
+            <h3 style="margin:0 0 4px;font-size:18px">向你的地区推荐：</h3>
+            <div class="muted" style="font-size:14px">江苏 / 四川 / 广东 / 山东 / 河南……</div>
+          </div>
+        </div>
+        <p style="font-size:14px;color:var(--color-ink-600);margin-top:16px">协会正在建立全国 Alport 诊疗中心地图。如果你所在地区的医院在 Alport 诊疗方面经验丰富，请告诉我们。</p>
+        <a href="#qa" class="btn btn-outline btn-sm mt-4">推荐医院 / 申请协助</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== 线上咨询会 ============================== -->
+<section class="section" id="online">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">EXPERT WEBINARS</span>
+      <h2>线上咨询会回看与预告</h2>
+      <p>每月一场专家直播 + 答疑 —— 2025 全年累计开展 30+ 场，覆盖数千患者家庭。所有直播均提供回放，确保每个时区的家人都能参与。</p>
+    </div>
+
+    <div class="grid grid-3 reveal">
+      <article class="article">
+        <div class="article-cover">
+          <div class="article-cover-icon">📅</div>
+        </div>
+        <div class="article-body">
+          <div class="article-meta">
+            <span class="tag tag-warm tag-dot">回看</span>
+            <span>2025-12-22 · 990 人参与</span>
+          </div>
+          <h3>家园共愈：辞旧迎新护理经验分享会</h3>
+          <p>汤爸爸 / 耿妈妈 / 王芳教授 / 张琰琴医生联合主讲，「三低一优」饮食法、家庭分工协作、稳定期复查节奏，三小时干货。</p>
+          <div class="article-foot"><a href="#">观看回放 →</a><span class="muted" style="font-size:13px">3 小时</span></div>
+        </div>
+      </article>
+
+      <article class="article">
+        <div class="article-cover dark"><div class="article-cover-icon">🌐</div></div>
+        <div class="article-body">
+          <div class="article-meta">
+            <span class="tag tag-dot">回看</span>
+            <span>2025-11-18 · 5775 人次</span>
+          </div>
+          <h3>中德 Alport 综合征诊治进展研讨会</h3>
+          <p>德国 Gross 教授 / Böckhaus 医生主讲药物联合管理与尿白蛋白肌酐比应用。中文同声传译。9.6 万次点赞见证。</p>
+          <div class="article-foot"><a href="#">观看回放 →</a><span class="muted" style="font-size:13px">2 小时</span></div>
+        </div>
+      </article>
+
+      <article class="article">
+        <div class="article-cover warm"><div class="article-cover-icon">⚕</div></div>
+        <div class="article-body">
+          <div class="article-meta">
+            <span class="tag tag-warm tag-dot">回看</span>
+            <span>2025-05-19 · 260 人参与</span>
+          </div>
+          <h3>肾移植术后患者调研意义及答疑</h3>
+          <p>北京友谊医院林俊医生团队主讲，覆盖免疫抑制剂规范、饮食、复查全周期建议，附问卷与隐私保护说明。</p>
+          <div class="article-foot"><a href="#">观看回放 →</a><span class="muted" style="font-size:13px">90 分钟</span></div>
+        </div>
+      </article>
+
+      <article class="article">
+        <div class="article-cover life"><div class="article-cover-icon">💊</div></div>
+        <div class="article-body">
+          <div class="article-meta">
+            <span class="tag tag-life tag-dot">回看</span>
+            <span>2025-04-03 · 269 人参与</span>
+          </div>
+          <h3>Alport 临床试验情况介绍及答疑</h3>
+          <p>周绪杰 / 李阳医生主讲「Smart 研究」最新数据、入组条件、用药细节问答。低血压管理 / 高钾血症预警实用建议。</p>
+          <div class="article-foot"><a href="#">观看回放 →</a><span class="muted" style="font-size:13px">2 小时</span></div>
+        </div>
+      </article>
+
+      <article class="article">
+        <div class="article-cover"><div class="article-cover-icon">👨‍⚕️</div></div>
+        <div class="article-body">
+          <div class="article-meta">
+            <span class="tag tag-dot">回看</span>
+            <span>2025-03-01 · 2414 人 · 7.7 万点赞</span>
+          </div>
+          <h3>国际罕见病日 Alport 综合征科普答疑（12 周年）</h3>
+          <p>北大一院 11 位跨学科专家（肾内 / 眼 / 耳鼻喉 / 营养科）联合答疑，从遗传机制到肾外表现干预，一站式守护。</p>
+          <div class="article-foot"><a href="#">观看回放 →</a><span class="muted" style="font-size:13px">3 小时</span></div>
+        </div>
+      </article>
+
+      <article class="article">
+        <div class="article-cover"><div class="article-cover-icon">📣</div></div>
+        <div class="article-body">
+          <div class="article-meta">
+            <span class="tag tag-dot">回看</span>
+            <span>2025-02-28 · 227 人参与</span>
+          </div>
+          <h3>新华医院 Alport 综合征医患交流会</h3>
+          <p>林芙君 / 饶佳主任四大维度（认知 / 多学科 / 治疗 / 心理）系统分享。</p>
+          <div class="article-foot"><a href="#">观看回放 →</a><span class="muted" style="font-size:13px">2 小时</span></div>
+        </div>
+      </article>
+    </div>
+
+    <div class="text-center mt-8 reveal">
+      <a href="#" class="btn btn-outline">查看全部 30+ 场回放归档 <span class="arrow">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== 提问墙 / 咨询 ============================== -->
+<section class="section bg-primary-soft" id="qa">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start" class="qa-grid">
+
+      <div class="reveal">
+        <span class="eyebrow">ASK THE EXPERT</span>
+        <h2 style="margin-top:12px">提交一对一咨询</h2>
+        <p>遇到具体的就医、用药、遗传咨询、保险、心理困扰？请填写下方表单。<strong>协会志愿者团队会在 48 小时内回复你</strong>，复杂问题会转介给医学顾问。所有信息严格保密。</p>
+
+        <div class="card card-elevated mt-8" style="border-left:4px solid var(--color-life-500)">
+          <strong style="color:var(--color-life-700)">协会服务承诺</strong>
+          <ul style="margin-top:8px;padding-left:20px">
+            <li>48 小时内首次回复（节假日顺延）</li>
+            <li>所有信息加密保存，未经同意不外传</li>
+            <li>无法解答的医学问题会转给合作专家</li>
+            <li>免费服务，不收取任何咨询费</li>
+          </ul>
+        </div>
+
+        <div class="mt-8">
+          <h4 style="font-size:14px;text-transform:uppercase;letter-spacing:.08em;color:var(--color-ink-600)">服务数据</h4>
+          <div class="grid grid-2 mt-4">
+            <div class="stat"><div class="v num">900<span class="unit">人次</span></div><div class="l">2025 全年精准咨询解答</div></div>
+            <div class="stat stat-warm"><div class="v num">48<span class="unit">小时</span></div><div class="l">平均首次回复时间</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal">
+        <form class="card card-elevated" style="padding:32px" onsubmit="event.preventDefault(); alert('感谢提交！我们会在 48 小时内通过你提供的微信或邮箱联系你。');">
+          <h3 style="margin-bottom:8px">咨询表单</h3>
+          <p style="font-size:14px;color:var(--color-ink-500);margin-bottom:24px">所有标 * 字段为必填</p>
+
+          <div class="form-field">
+            <label for="ident">你的身份 *</label>
+            <select id="ident" required>
+              <option value="">请选择</option>
+              <option>患者本人</option>
+              <option>患者家属</option>
+              <option>医生 / 医务人员</option>
+              <option>研究者 / 学生</option>
+              <option>媒体 / 公益机构</option>
+            </select>
+          </div>
+
+          <div class="form-field">
+            <label for="region">所在地区</label>
+            <input id="region" type="text" placeholder="例如：广东省深圳市">
+          </div>
+
+          <div class="form-field">
+            <label for="topic">咨询类别 *</label>
+            <select id="topic" required>
+              <option value="">请选择</option>
+              <option>就医 / 医院推荐</option>
+              <option>基因检测 / 遗传咨询</option>
+              <option>药物 / 治疗方案</option>
+              <option>临床试验入组</option>
+              <option>肾移植与术后</option>
+              <option>心理与生活支持</option>
+              <option>加入患者社群</option>
+              <option>其他</option>
+            </select>
+          </div>
+
+          <div class="form-field">
+            <label for="msg">具体描述 *</label>
+            <textarea id="msg" required placeholder="请尽量详细描述你的情况：诊断时间、年龄、目前用药、最近一次肾功能指标等。信息越完整，我们的回复越精准。"></textarea>
+            <div class="hint">不要直接填写身份证号、详细住址等敏感信息</div>
+          </div>
+
+          <div class="form-field">
+            <label for="contact">联系方式（微信号或邮箱）*</label>
+            <input id="contact" type="text" required placeholder="例如 microsoft@gmail.com 或 微信号">
+          </div>
+
+          <label style="display:flex;gap:8px;font-size:14px;color:var(--color-ink-600);margin-bottom:24px">
+            <input type="checkbox" required style="margin-top:3px">
+            <span>我已阅读并同意《隐私政策》，授权协会将我的信息用于本次咨询的解答。</span>
+          </label>
+
+          <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center">提交咨询 <span class="arrow">→</span></button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+@media (max-width: 900px) {
+  .qa-grid { grid-template-columns: 1fr !important; }
+}
+</style>
+
+<div data-include="footer"></div>
+<script src="js/site.js"></script>
+</body>
+</html>

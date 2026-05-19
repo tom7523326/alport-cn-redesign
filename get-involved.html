@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>加入我们 · 患者登记 / 月捐 / 志愿者 · 中国 Alport 综合征家长协会</title>
+<meta name="description" content="加入中国 Alport 综合征家长协会：作为患者登记、加入月捐计划、成为志愿者、企业 / 基金会合作。让我们一起把罕见变成可见。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;600;700&family=Noto+Serif+SC:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/design-system.css?v=2">
+</head>
+<body data-page="join">
+
+<div data-include="header"></div>
+
+<section class="page-head">
+  <div class="container">
+    <nav class="breadcrumb"><a href="index.html">首页</a> · 加入我们</nav>
+    <span class="eyebrow">GET INVOLVED</span>
+    <h1 style="margin-top:12px">加入我们</h1>
+    <p>「微小的坚持终将汇聚成改变的力量。」无论你是患者、家属、志愿者、捐赠者还是合作伙伴 —— 这里都有你可以贡献的位置。</p>
+    <div style="display:flex;gap:12px;margin-top:24px;flex-wrap:wrap">
+      <a href="#register" class="btn btn-primary">患者登记</a>
+      <a href="#donate" class="btn btn-warm">月捐支持</a>
+      <a href="#volunteer" class="btn btn-outline">成为志愿者</a>
+      <a href="#partner" class="btn btn-outline">机构合作</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== 患者登记 ============================== -->
+<section class="section" id="register">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start" class="two-col">
+
+      <div class="reveal">
+        <span class="eyebrow">PATIENT REGISTRY</span>
+        <h2 style="margin-top:12px">加入患者登记</h2>
+        <p>填写一份 5 分钟问卷，让我们知道你的诊断、所在地、年龄段。我们将：</p>
+        <ul>
+          <li>根据你的情况推荐最合适的<strong>分场景社群</strong></li>
+          <li>把你纳入<strong>临床试验候选名单</strong>，符合条件时第一时间通知</li>
+          <li>定期推送<strong>科研进展与活动信息</strong>（可随时取消）</li>
+          <li>为你预约最近的<strong>专家会诊或在线咨询</strong></li>
+        </ul>
+
+        <div class="card card-elevated mt-8" style="border-left:4px solid var(--color-life-500)">
+          <strong style="color:var(--color-life-700)">隐私承诺</strong>
+          <ul style="margin-top:8px;padding-left:20px;font-size:14px">
+            <li>所有数据在协会服务器加密保存，未经你同意不会用于研究或外部分享</li>
+            <li>研究使用前会单独征求你的明确同意</li>
+            <li>你可以随时申请删除自己的数据</li>
+            <li>未成年人信息由监护人代为登记</li>
+          </ul>
+        </div>
+
+        <div class="mt-8">
+          <h4 style="font-size:14px;text-transform:uppercase;letter-spacing:.08em;color:var(--color-ink-600);margin-bottom:12px">截至目前</h4>
+          <div class="grid grid-2">
+            <div class="stat"><div class="v num">4825<span class="unit">人</span></div><div class="l">已加入社群的家人</div></div>
+            <div class="stat stat-life"><div class="v num">248<span class="unit">份</span></div><div class="l">完成详细问卷登记</div></div>
+          </div>
+        </div>
+      </div>
+
+      <form class="card card-elevated reveal" style="padding:32px" onsubmit="event.preventDefault(); alert('感谢加入！我们会在 48 小时内通过你提供的微信号联系你，根据情况匹配社群与资源。');">
+        <h3 style="margin-bottom:8px">登记表单</h3>
+        <p style="font-size:13px;color:var(--color-ink-500);margin-bottom:20px">所有标 * 字段为必填，预计填写时间 5 分钟</p>
+
+        <div class="form-field">
+          <label for="ident2">你的身份 *</label>
+          <select id="ident2" required>
+            <option value="">请选择</option>
+            <option>患者本人（成年）</option>
+            <option>患者本人（未成年）</option>
+            <option>患者父母</option>
+            <option>患者配偶 / 兄弟姐妹</option>
+            <option>其他家属</option>
+          </select>
+        </div>
+
+        <div class="form-field">
+          <label for="dx">诊断状态 *</label>
+          <select id="dx" required>
+            <option value="">请选择</option>
+            <option>怀疑 Alport，正在寻求确诊</option>
+            <option>临床诊断（未做基因检测）</option>
+            <option>基因检测确诊 · X 连锁 (COL4A5)</option>
+            <option>基因检测确诊 · 隐性 (COL4A3/4)</option>
+            <option>基因检测确诊 · 显性 (COL4A3/4)</option>
+            <option>基因检测确诊 · 不确定类型</option>
+            <option>女性携带者</option>
+          </select>
+        </div>
+
+        <div class="grid grid-2" style="gap:16px">
+          <div class="form-field">
+            <label for="age2">患者年龄 *</label>
+            <input id="age2" type="text" required placeholder="例如：12 岁">
+          </div>
+          <div class="form-field">
+            <label for="dxyear">确诊年份</label>
+            <input id="dxyear" type="text" placeholder="例如：2020">
+          </div>
+        </div>
+
+        <div class="form-field">
+          <label for="province">所在省份 *</label>
+          <select id="province" required>
+            <option value="">请选择</option>
+            <option>北京</option><option>上海</option><option>广东</option><option>江苏</option><option>浙江</option>
+            <option>四川</option><option>湖北</option><option>河南</option><option>山东</option><option>福建</option>
+            <option>其他（请在备注说明）</option>
+          </select>
+        </div>
+
+        <div class="form-field">
+          <label>你最希望获得的支持 *（可多选）</label>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px">
+            <label style="display:flex;gap:6px;font-size:14px"><input type="checkbox"> 加入社群陪伴</label>
+            <label style="display:flex;gap:6px;font-size:14px"><input type="checkbox"> 专家会诊推荐</label>
+            <label style="display:flex;gap:6px;font-size:14px"><input type="checkbox"> 基因检测协助</label>
+            <label style="display:flex;gap:6px;font-size:14px"><input type="checkbox"> 临床试验入组</label>
+            <label style="display:flex;gap:6px;font-size:14px"><input type="checkbox"> 心理支持</label>
+            <label style="display:flex;gap:6px;font-size:14px"><input type="checkbox"> 经济援助信息</label>
+            <label style="display:flex;gap:6px;font-size:14px"><input type="checkbox"> 公众号订阅</label>
+            <label style="display:flex;gap:6px;font-size:14px"><input type="checkbox"> 暂不确定</label>
+          </div>
+        </div>
+
+        <div class="form-field">
+          <label for="wechat2">联系方式（微信号优先）*</label>
+          <input id="wechat2" type="text" required placeholder="微信号 / 邮箱">
+        </div>
+
+        <label style="display:flex;gap:8px;font-size:13px;color:var(--color-ink-600);margin-bottom:20px">
+          <input type="checkbox" required style="margin-top:3px">
+          <span>我已阅读并同意《隐私政策》，授权协会在严格保密的前提下保存我的信息。</span>
+        </label>
+
+        <button type="submit" class="btn btn-primary btn-lg" style="width:100%;justify-content:center">完成登记 · 加入家园 <span class="arrow">→</span></button>
+      </form>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================== 月捐 ============================== -->
+<section class="section bg-primary-soft" id="donate">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">MONTHLY GIVING</span>
+      <h2>月捐计划：七载同行，爱如涓流汇江海</h2>
+      <p>自 2019 年「同行伙伴月捐计划」启航以来，509 位月捐伙伴用每月一笔不大的金额，撑起了 9 个社群、139 篇科普、30+ 场公益讲座、248 份调研，以及 600+ 家庭的直接帮助。</p>
+    </div>
+
+    <div class="grid grid-3 reveal mb-12">
+      <div class="card card-elevated text-center" style="border:2px solid var(--color-primary-200)">
+        <div style="font-family:var(--font-serif);color:var(--color-primary-700);font-size:13px;letter-spacing:.1em;text-transform:uppercase;font-weight:600">家园伙伴</div>
+        <div class="num" style="font-size:48px;font-weight:800;color:var(--color-primary-700);margin:12px 0">¥10<span style="font-size:18px;color:var(--color-ink-500)"> /月</span></div>
+        <p style="font-size:14px;color:var(--color-ink-600)">一杯咖啡的价格，就能支持 1 个家庭获得一次免费咨询</p>
+        <a href="#" class="btn btn-outline btn-sm mt-6">选择此档</a>
+      </div>
+      <div class="card card-elevated text-center" style="border:2px solid var(--color-warm-500);position:relative;transform:translateY(-12px);box-shadow:var(--shadow-lg)">
+        <div style="position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--color-warm-500);color:#fff;padding:4px 12px;border-radius:var(--r-pill);font-size:12px;font-weight:700">最受欢迎</div>
+        <div style="font-family:var(--font-serif);color:var(--color-warm-700);font-size:13px;letter-spacing:.1em;text-transform:uppercase;font-weight:600">同行伙伴</div>
+        <div class="num" style="font-size:48px;font-weight:800;color:var(--color-warm-600);margin:12px 0">¥50<span style="font-size:18px;color:var(--color-ink-500)"> /月</span></div>
+        <p style="font-size:14px;color:var(--color-ink-600)">一年支持 1 篇科普文章诞生 + 1 位患者享受全年社群服务</p>
+        <a href="#" class="btn btn-warm btn-sm mt-6">选择此档</a>
+      </div>
+      <div class="card card-elevated text-center" style="border:2px solid var(--color-life-500)">
+        <div style="font-family:var(--font-serif);color:var(--color-life-700);font-size:13px;letter-spacing:.1em;text-transform:uppercase;font-weight:600">守护伙伴</div>
+        <div class="num" style="font-size:48px;font-weight:800;color:var(--color-life-600);margin:12px 0">¥200<span style="font-size:18px;color:var(--color-ink-500)"> /月</span></div>
+        <p style="font-size:14px;color:var(--color-ink-600)">一年捐赠相当于支持 1 场专家直播 / 1 项摸底调研的执行</p>
+        <a href="#" class="btn btn-outline btn-sm mt-6">选择此档</a>
+      </div>
+    </div>
+
+    <div class="reveal" style="text-align:center">
+      <p style="font-size:15px;color:var(--color-ink-600);margin-bottom:16px">也可选择一次性捐赠：</p>
+      <div style="display:flex;justify-content:center;gap:8px;flex-wrap:wrap">
+        <a href="#" class="btn btn-outline btn-sm">¥50</a>
+        <a href="#" class="btn btn-outline btn-sm">¥100</a>
+        <a href="#" class="btn btn-outline btn-sm">¥500</a>
+        <a href="#" class="btn btn-outline btn-sm">¥1 000</a>
+        <a href="#" class="btn btn-outline btn-sm">自定义金额</a>
+      </div>
+    </div>
+
+    <div class="cta-band reveal mt-16">
+      <div style="display:grid;grid-template-columns:1.4fr 1fr;gap:48px;align-items:center" class="cta-band-grid">
+        <div>
+          <h3 style="color:#fff;font-size:24px">每月一笔月捐，<br>就是支撑服务网络的毛细血管</h3>
+          <p style="margin-top:12px;font-size:15px">你的月捐通过<strong>天使妈妈基金会</strong>等公募合作伙伴专款专用，可开具公益捐赠票据用于个人所得税抵扣。</p>
+          <ul style="margin-top:16px;font-size:14px;color:rgba(255,255,255,.85);padding-left:20px">
+            <li>每季度收到协会工作简报</li>
+            <li>专属月捐伙伴标识与年度纪念</li>
+            <li>优先邀请参与协会线下活动</li>
+            <li>捐赠票据可用于个税抵扣</li>
+          </ul>
+        </div>
+        <div style="text-align:center">
+          <div class="num" style="font-size:96px;font-weight:800;line-height:1;color:#FCD34D">509</div>
+          <div style="font-size:13px;letter-spacing:.1em;text-transform:uppercase;margin-top:8px;opacity:.9">月捐伙伴 · 持续陪伴 7 年</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== 志愿者 ============================== -->
+<section class="section" id="volunteer">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">VOLUNTEER</span>
+      <h2>成为志愿者</h2>
+      <p>协会 80% 的工作由志愿者完成。无论你能投入多少时间，我们都有适合你的位置。</p>
+    </div>
+
+    <div class="grid grid-3 reveal">
+      <article class="card card-feature">
+        <div class="card-icon">🩺</div>
+        <h3>群管理 / 咨询响应</h3>
+        <p>每周投入 3–5 小时，在 9 个社群中接待新成员、整理常见问题、转介复杂问题给医学顾问。</p>
+        <p class="mt-4"><strong>适合：</strong>资深患者家属 / 医务工作者</p>
+      </article>
+
+      <article class="card card-feature">
+        <div class="card-icon warm">✍️</div>
+        <h3>内容创作 / 翻译</h3>
+        <p>参与公众号深度内容创作（年度 139 篇）、小红书 6 个垂类账号运营、国际文献翻译（年度 30+ 篇）。</p>
+        <p class="mt-4"><strong>适合：</strong>有内容创作 / 外语 / 医学背景的志愿者</p>
+      </article>
+
+      <article class="card card-feature">
+        <div class="card-icon life">🧪</div>
+        <h3>科联组 / 文献追踪</h3>
+        <p>每月查阅、翻译、汇总前沿文献 30+ 篇，建立资料库。协助药企临床试验沟通与方案审阅。</p>
+        <p class="mt-4"><strong>适合：</strong>生物学 / 医学专业学生或研究者</p>
+      </article>
+
+      <article class="card card-feature">
+        <div class="card-icon">📷</div>
+        <h3>影像 / 设计 / 装裱</h3>
+        <p>参与年度宣传片制作（如《携手同行》《全球聚力》）、海报设计、艺术展品装裱与解说。</p>
+        <p class="mt-4"><strong>适合：</strong>有设计 / 摄影 / 影视背景的志愿者</p>
+      </article>
+
+      <article class="card card-feature">
+        <div class="card-icon warm">🗣</div>
+        <h3>大型活动协调</h3>
+        <p>参与国际研讨会、线下家长联谊会、罕见病日公益展的会务、翻译、餐饮住宿协调。</p>
+        <p class="mt-4"><strong>适合：</strong>有活动组织 / 项目管理经验</p>
+      </article>
+
+      <article class="card card-feature">
+        <div class="card-icon life">💼</div>
+        <h3>专业技能志愿</h3>
+        <p>法律、财务、心理咨询、IT 技术等专业领域的兼职志愿者，按项目对接。</p>
+        <p class="mt-4"><strong>适合：</strong>具备专业资质的从业者</p>
+      </article>
+    </div>
+
+    <div class="card card-elevated reveal mt-12" style="text-align:center;padding:48px">
+      <h3 style="font-size:22px">报名成为志愿者</h3>
+      <p style="margin-top:8px">告诉我们你能投入的时间与希望参与的方向，我们的志愿者负责人会联系你完成入队培训。</p>
+      <a href="doctors.html#qa" class="btn btn-primary btn-lg mt-6">填写志愿者申请表</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== 机构合作 ============================== -->
+<section class="section bg-soft" id="partner">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">PARTNER WITH US</span>
+      <h2>企业 / 基金会 / 媒体合作</h2>
+      <p>无论你是希望资助患者公益项目的企业、寻找罕见病合作的基金会，还是希望报道 Alport 群体的媒体 —— 我们都欢迎一对一深度对话。</p>
+    </div>
+
+    <div class="grid grid-3 reveal">
+      <div class="card card-elevated">
+        <div class="card-icon">🏢</div>
+        <h3>企业合作</h3>
+        <p>药企临床试验招募协作、企业月捐对等匹配、员工志愿日、医疗器械捐赠等多种合作形式。</p>
+        <p class="mt-4" style="font-size:13px;color:var(--color-ink-500)">案例：2025 年 6 月某药企邀请协会进行患者群体情况交流，推动新药研发对话。</p>
+      </div>
+      <div class="card card-elevated">
+        <div class="card-icon warm">💰</div>
+        <h3>基金会 / 慈善机构合作</h3>
+        <p>专项基金共建、患者经济援助项目、罕见病政策倡导联合行动等。</p>
+        <p class="mt-4" style="font-size:13px;color:var(--color-ink-500)">合作伙伴：天使妈妈基金会、寇德罕见病中心等。</p>
+      </div>
+      <div class="card card-elevated">
+        <div class="card-icon life">📰</div>
+        <h3>媒体报道合作</h3>
+        <p>患者故事采访、专家深度访谈、科普内容联合制作、国际罕见病日联动等。</p>
+        <p class="mt-4" style="font-size:13px;color:var(--color-ink-500)">联系媒体接待人：press@alport.cn</p>
+      </div>
+    </div>
+
+    <div class="card card-elevated reveal mt-12" style="text-align:center;padding:48px">
+      <h3 style="font-size:22px">立即开启对话</h3>
+      <p style="margin-top:8px">协会理事长团队会亲自对接机构合作。请发送合作意向至下方邮箱，附简要介绍。</p>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:24px">
+        <a href="mailto:partnership@alport.cn" class="btn btn-primary">partnership@alport.cn</a>
+        <a href="mailto:press@alport.cn" class="btn btn-outline">媒体：press@alport.cn</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+@media (max-width: 900px) {
+  .two-col { grid-template-columns: 1fr !important; }
+  .cta-band-grid { grid-template-columns: 1fr !important; text-align:center; }
+}
+</style>
+
+<div data-include="footer"></div>
+<script src="js/site.js"></script>
+</body>
+</html>

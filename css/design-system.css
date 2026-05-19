@@ -295,7 +295,8 @@ p  { margin: 0 0 var(--sp-4); }
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: var(--sp-6);
+  gap: var(--sp-5);
+  min-width: 0;
 }
 .nav-brand {
   display: flex;
@@ -306,6 +307,7 @@ p  { margin: 0 0 var(--sp-4); }
   font-weight: 700;
   font-size: var(--fs-md);
   flex-shrink: 0;
+  white-space: nowrap;
 }
 .nav-brand:hover { color: var(--color-ink-900); }
 .nav-brand-logo {
@@ -319,17 +321,26 @@ p  { margin: 0 0 var(--sp-4); }
   font-size: var(--fs-md);
   letter-spacing: -.05em;
   box-shadow: 0 4px 12px rgba(37, 99, 235, .25);
+  flex-shrink: 0;
 }
-.nav-brand-text { display: flex; flex-direction: column; line-height: 1.2; }
-.nav-brand-en { font-size: 11px; font-weight: 500; color: var(--color-ink-500); letter-spacing: .08em; font-family: var(--font-num); }
+.nav-brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+.nav-brand-cn { font-size: 16px; font-weight: 700; }
+.nav-brand-en { font-size: 10.5px; font-weight: 500; color: var(--color-ink-500); letter-spacing: .08em; font-family: var(--font-num); margin-top: 3px; }
 
 .nav-links {
   display: flex;
   align-items: center;
-  gap: var(--sp-1);
+  gap: 2px;
   list-style: none;
   margin: 0;
   padding: 0;
+  flex-wrap: nowrap;
+  min-width: 0;
 }
 .nav-links a {
   display: inline-block;
@@ -338,6 +349,7 @@ p  { margin: 0 0 var(--sp-4); }
   color: var(--color-ink-700);
   font-weight: 500;
   font-size: var(--fs-sm);
+  white-space: nowrap;
   transition: all var(--t-fast) var(--ease-out);
 }
 .nav-links a:hover,
@@ -345,7 +357,12 @@ p  { margin: 0 0 var(--sp-4); }
   background: var(--color-primary-50);
   color: var(--color-primary-700);
 }
-.nav-actions { display: flex; align-items: center; gap: var(--sp-2); }
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  flex-shrink: 0;
+}
 
 .nav-toggle {
   display: none;
@@ -355,10 +372,25 @@ p  { margin: 0 0 var(--sp-4); }
   background: var(--color-ink-100);
 }
 
+/* 中等屏 (1080-1280) — 收紧品牌、隐藏次级 CTA、缩小 nav 间距，但保留 7 项菜单 */
+@media (max-width: 1280px) {
+  .nav-inner { gap: var(--sp-3); }
+  .nav-brand { font-size: 15px; gap: 10px; }
+  .nav-brand-logo { width: 40px; height: 40px; border-radius: 11px; font-size: 17px; }
+  .nav-brand-cn { font-size: 15px; }
+  .nav-brand-en { display: none; }
+  .nav-links { gap: 0; }
+  .nav-links a { padding: 7px 10px; font-size: 13.5px; }
+  .nav-actions .btn:not(.btn-warm) { display: none; }
+  .nav-actions .btn { padding: 9px 14px; font-size: 13px; }
+}
+
+/* 平板 / 小桌面 (≤ 1080) — 切汉堡菜单 */
 @media (max-width: 1080px) {
   .nav-links { display: none; }
   .nav-toggle { display: inline-flex; }
   .nav-actions .btn:not(.btn-warm) { display: none; }
+  .nav-brand-en { display: inline; }
 }
 .mobile-menu {
   display: none;

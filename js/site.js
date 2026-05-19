@@ -27,7 +27,7 @@
           <a class="nav-brand" href="index.html" aria-label="返回首页">
             <span class="nav-brand-logo" aria-hidden="true">A</span>
             <span class="nav-brand-text">
-              <span>中国 Alport 综合征家长协会</span>
+              <span class="nav-brand-cn">中国 Alport 综合征家长协会</span>
               <span class="nav-brand-en">CHINA ALPORT SYNDROME ASSOCIATION</span>
             </span>
           </a>
@@ -65,7 +65,7 @@
               <a class="nav-brand" href="index.html">
                 <span class="nav-brand-logo" aria-hidden="true">A</span>
                 <span class="nav-brand-text">
-                  <span>中国 Alport 综合征家长协会</span>
+                  <span class="nav-brand-cn">中国 Alport 综合征家长协会</span>
                   <span class="nav-brand-en">CHINA ALPORT SYNDROME ASSOCIATION</span>
                 </span>
               </a>

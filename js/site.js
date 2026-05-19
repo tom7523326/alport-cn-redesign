@@ -21,6 +21,10 @@
       .map(it => `<li><a href="${it.href}" data-nav="${it.id}" class="${it.id === activeId ? 'is-active' : ''}">${it.label}</a></li>`)
       .join('');
 
+    const mobileLinks = NAV_ITEMS
+      .map(it => `<li><a href="${it.href}" data-nav="${it.id}" class="${it.id === activeId ? 'is-active' : ''}">${it.label}</a></li>`)
+      .join('');
+
     return `
       <header class="navbar" role="banner">
         <div class="container nav-inner">
@@ -37,21 +41,20 @@
           <div class="nav-actions">
             <a href="get-involved.html#register" class="btn btn-outline btn-sm">加入患者登记</a>
             <a href="get-involved.html#donate" class="btn btn-warm btn-sm">月捐支持<span class="arrow" aria-hidden="true">→</span></a>
-            <button class="nav-toggle" aria-label="打开菜单" aria-expanded="false" id="navToggle">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
-                <path d="M3 6h18M3 12h18M3 18h18"/>
-              </svg>
+            <button type="button" class="nav-toggle" aria-label="打开菜单" aria-expanded="false" aria-controls="mobileMenu" id="navToggle">
+              <span class="ico" aria-hidden="true"><span></span></span>
             </button>
           </div>
         </div>
-        <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
-          ${NAV_ITEMS.map(it => `<a href="${it.href}">${it.label}</a>`).join('')}
-          <div style="padding:24px 16px 0;display:flex;flex-direction:column;gap:12px">
-            <a href="get-involved.html#register" class="btn btn-outline">加入患者登记</a>
-            <a href="get-involved.html#donate" class="btn btn-warm">月捐支持</a>
-          </div>
-        </div>
       </header>
+      <div class="mobile-menu-backdrop" id="mobileMenuBackdrop" aria-hidden="true"></div>
+      <aside class="mobile-menu" id="mobileMenu" aria-hidden="true" aria-label="移动端导航">
+        <ul class="mobile-menu-list">${mobileLinks}</ul>
+        <div class="mobile-menu-cta">
+          <a href="get-involved.html#register" class="btn btn-outline">加入患者登记</a>
+          <a href="get-involved.html#donate" class="btn btn-warm">月捐支持<span class="arrow" aria-hidden="true">→</span></a>
+        </div>
+      </aside>
     `;
   }
 
@@ -128,15 +131,51 @@
     if (headerSlot) headerSlot.outerHTML = buildHeader(activeId);
     if (footerSlot) footerSlot.outerHTML = buildFooter();
 
-    /* Mobile menu */
+    /* ---------- Mobile menu (drawer + backdrop) ---------- */
     const toggle = document.getElementById('navToggle');
     const menu = document.getElementById('mobileMenu');
+    const backdrop = document.getElementById('mobileMenuBackdrop');
+
+    function setMenuOpen(open) {
+      if (!toggle || !menu) return;
+      menu.classList.toggle('is-open', open);
+      if (backdrop) backdrop.classList.toggle('is-open', open);
+      toggle.setAttribute('aria-expanded', String(open));
+      menu.setAttribute('aria-hidden', String(!open));
+      if (backdrop) backdrop.setAttribute('aria-hidden', String(!open));
+      toggle.setAttribute('aria-label', open ? '关闭菜单' : '打开菜单');
+      document.body.classList.toggle('menu-open', open);
+    }
+
     if (toggle && menu) {
-      toggle.addEventListener('click', () => {
-        const open = menu.classList.toggle('is-open');
-        toggle.setAttribute('aria-expanded', String(open));
-        menu.setAttribute('aria-hidden', String(!open));
-        document.body.style.overflow = open ? 'hidden' : '';
+      toggle.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        const willOpen = !menu.classList.contains('is-open');
+        setMenuOpen(willOpen);
+      });
+
+      if (backdrop) {
+        backdrop.addEventListener('click', () => setMenuOpen(false));
+      }
+
+      menu.querySelectorAll('a').forEach(a => {
+        a.addEventListener('click', () => {
+          setMenuOpen(false);
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && menu.classList.contains('is-open')) {
+          setMenuOpen(false);
+          toggle.focus();
+        }
+      });
+
+      window.addEventListener('resize', () => {
+        if (window.innerWidth > 1080 && menu.classList.contains('is-open')) {
+          setMenuOpen(false);
+        }
       });
     }
 

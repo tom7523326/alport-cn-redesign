@@ -392,17 +392,137 @@ p  { margin: 0 0 var(--sp-4); }
   .nav-actions .btn:not(.btn-warm) { display: none; }
   .nav-brand-en { display: inline; }
 }
-.mobile-menu {
-  display: none;
+
+/* ============================================================
+   Mobile menu (drawer + overlay)
+   ============================================================ */
+.nav-toggle {
+  position: relative;
+  background: var(--color-ink-100);
+  border: none;
+  cursor: pointer;
+  color: var(--color-ink-800);
+  transition: background var(--t-fast) var(--ease-out);
+}
+.nav-toggle:hover,
+.nav-toggle:focus-visible { background: var(--color-ink-200); }
+.nav-toggle:focus-visible { outline: 2px solid var(--color-primary-500); outline-offset: 2px; }
+.nav-toggle .ico {
+  width: 22px; height: 22px;
+  display: block;
+  position: relative;
+}
+.nav-toggle .ico::before,
+.nav-toggle .ico::after,
+.nav-toggle .ico > span {
+  content: '';
+  position: absolute;
+  left: 2px;
+  right: 2px;
+  height: 2px;
+  background: currentColor;
+  border-radius: 2px;
+  transition: transform var(--t-fast) var(--ease-out), opacity var(--t-fast) var(--ease-out), top var(--t-fast) var(--ease-out);
+}
+.nav-toggle .ico::before { top: 4px; }
+.nav-toggle .ico > span { top: 10px; }
+.nav-toggle .ico::after { top: 16px; }
+.nav-toggle[aria-expanded="true"] .ico::before { top: 10px; transform: rotate(45deg); }
+.nav-toggle[aria-expanded="true"] .ico > span { opacity: 0; }
+.nav-toggle[aria-expanded="true"] .ico::after { top: 10px; transform: rotate(-45deg); }
+
+.mobile-menu-backdrop {
   position: fixed;
-  inset: var(--nav-h) 0 0 0;
+  inset: 0;
+  background: rgba(15, 23, 42, .45);
+  z-index: 98;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--t-normal) var(--ease-out);
+}
+.mobile-menu-backdrop.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.mobile-menu {
+  position: fixed;
+  top: var(--nav-h);
+  right: 0;
+  bottom: 0;
+  width: min(86vw, 360px);
   background: var(--color-white);
-  padding: var(--sp-6);
+  padding: 12px 0 24px;
   overflow-y: auto;
   z-index: 99;
+  box-shadow: -12px 0 32px rgba(15, 23, 42, .12);
+  transform: translateX(100%);
+  transition: transform var(--t-normal) var(--ease-out);
+  -webkit-overflow-scrolling: touch;
+  display: flex;
+  flex-direction: column;
 }
-.mobile-menu.is-open { display: block; }
-.mobile-menu a { display: block; padding: 14px var(--sp-4); border-bottom: 1px solid var(--color-ink-100); color: var(--color-ink-800); font-weight: 500; }
+.mobile-menu.is-open { transform: translateX(0); }
+
+.mobile-menu-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex: 1 0 auto;
+}
+.mobile-menu-list a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  border-bottom: 1px solid var(--color-ink-100);
+  color: var(--color-ink-900);
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  min-height: 56px;
+  -webkit-tap-highlight-color: rgba(37, 99, 235, .1);
+}
+.mobile-menu-list a::after {
+  content: '›';
+  color: var(--color-ink-400);
+  font-size: 22px;
+  font-weight: 300;
+  margin-left: 12px;
+}
+.mobile-menu-list a:hover,
+.mobile-menu-list a:focus-visible,
+.mobile-menu-list a:active { background: var(--color-primary-50); color: var(--color-primary-700); }
+.mobile-menu-list a.is-active {
+  background: var(--color-primary-50);
+  color: var(--color-primary-700);
+  border-left: 3px solid var(--color-primary-600);
+  padding-left: 21px;
+}
+
+.mobile-menu-cta {
+  padding: 20px 24px 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-top: 1px solid var(--color-ink-100);
+  margin-top: 4px;
+}
+.mobile-menu-cta .btn {
+  width: 100%;
+  justify-content: center;
+  padding: 13px 16px;
+  font-size: 15px;
+}
+
+/* 在桌面端 (>1080) 完全隐藏，避免任何残留显示 */
+@media (min-width: 1081px) {
+  .mobile-menu,
+  .mobile-menu-backdrop { display: none !important; }
+}
+
+/* 当 menu 打开时，锁住背景 body 滚动 */
+body.menu-open { overflow: hidden; touch-action: none; }
 
 /* ============================================================
    Hero

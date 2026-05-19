@@ -117,15 +117,15 @@
 
         <div class="form-field">
           <label>你最希望获得的支持 *（可多选）</label>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px">
-            <label style="display:flex;gap:6px;font-size:14px"><input type="checkbox"> 加入社群陪伴</label>
-            <label style="display:flex;gap:6px;font-size:14px"><input type="checkbox"> 专家会诊推荐</label>
-            <label style="display:flex;gap:6px;font-size:14px"><input type="checkbox"> 基因检测协助</label>
-            <label style="display:flex;gap:6px;font-size:14px"><input type="checkbox"> 临床试验入组</label>
-            <label style="display:flex;gap:6px;font-size:14px"><input type="checkbox"> 心理支持</label>
-            <label style="display:flex;gap:6px;font-size:14px"><input type="checkbox"> 经济援助信息</label>
-            <label style="display:flex;gap:6px;font-size:14px"><input type="checkbox"> 公众号订阅</label>
-            <label style="display:flex;gap:6px;font-size:14px"><input type="checkbox"> 暂不确定</label>
+          <div class="choice-group" role="group" aria-label="希望获得的支持">
+            <label class="choice"><input type="checkbox" name="support" value="community"><span class="choice__box"></span><span class="choice__label">加入社群陪伴</span></label>
+            <label class="choice"><input type="checkbox" name="support" value="referral"><span class="choice__box"></span><span class="choice__label">专家会诊推荐</span></label>
+            <label class="choice"><input type="checkbox" name="support" value="genetic"><span class="choice__box"></span><span class="choice__label">基因检测协助</span></label>
+            <label class="choice"><input type="checkbox" name="support" value="trial"><span class="choice__box"></span><span class="choice__label">临床试验入组</span></label>
+            <label class="choice"><input type="checkbox" name="support" value="psych"><span class="choice__box"></span><span class="choice__label">心理支持</span></label>
+            <label class="choice"><input type="checkbox" name="support" value="aid"><span class="choice__box"></span><span class="choice__label">经济援助信息</span></label>
+            <label class="choice"><input type="checkbox" name="support" value="news"><span class="choice__box"></span><span class="choice__label">公众号订阅</span></label>
+            <label class="choice"><input type="checkbox" name="support" value="unsure"><span class="choice__box"></span><span class="choice__label">暂不确定</span></label>
           </div>
         </div>
 
@@ -134,8 +134,9 @@
           <input id="wechat2" type="text" required placeholder="微信号 / 邮箱">
         </div>
 
-        <label style="display:flex;gap:8px;font-size:13px;color:var(--color-ink-600);margin-bottom:20px">
-          <input type="checkbox" required style="margin-top:3px">
+        <label class="consent">
+          <input type="checkbox" required>
+          <span class="choice__box"></span>
           <span>我已阅读并同意《隐私政策》，授权协会在严格保密的前提下保存我的信息。</span>
         </label>
 

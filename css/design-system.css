@@ -752,6 +752,126 @@ p  { margin: 0 0 var(--sp-4); }
 .form-field textarea { resize: vertical; min-height: 100px; }
 .form-field .hint { font-size: var(--fs-xs); color: var(--color-ink-500); margin-top: var(--sp-1); }
 
+/* ---- Choice group: chip-style checkboxes & radios ---------------- */
+.choice-group {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 10px;
+  margin-top: 10px;
+}
+.choice {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  padding: 10px 14px;
+  border: 1.5px solid var(--color-ink-200);
+  border-radius: var(--r-md);
+  background: var(--color-white);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-ink-800);
+  line-height: 1.2;
+  cursor: pointer;
+  user-select: none;
+  transition: border-color 150ms var(--ease-out), background-color 150ms var(--ease-out), box-shadow 150ms var(--ease-out), color 150ms var(--ease-out);
+}
+.choice:hover { border-color: var(--color-primary-300); background: var(--color-primary-50); }
+.choice input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+.choice__box {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  border: 1.5px solid var(--color-ink-300);
+  border-radius: 4px;
+  background: var(--color-white);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 150ms var(--ease-out), border-color 150ms var(--ease-out);
+}
+.choice input[type="radio"] ~ .choice__box { border-radius: 50%; }
+.choice__box::after {
+  content: '';
+  width: 5px;
+  height: 9px;
+  border: solid var(--color-white);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg) scale(.4);
+  opacity: 0;
+  margin-top: -2px;
+  transition: opacity 150ms var(--ease-out), transform 150ms var(--ease-out);
+}
+.choice__label {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.choice input:checked ~ .choice__box {
+  background: var(--color-primary-600);
+  border-color: var(--color-primary-600);
+}
+.choice input:checked ~ .choice__box::after { opacity: 1; transform: rotate(45deg) scale(1); }
+.choice input[type="radio"]:checked ~ .choice__box {
+  background: var(--color-white);
+  border: 5px solid var(--color-primary-600);
+}
+.choice input[type="radio"] ~ .choice__box::after { display: none; }
+.choice:has(input:checked) {
+  border-color: var(--color-primary-600);
+  background: var(--color-primary-50);
+  color: var(--color-primary-700);
+}
+.choice:has(input:focus-visible) {
+  border-color: var(--color-primary-600);
+  box-shadow: var(--shadow-glow);
+}
+
+/* ---- Consent row (single inline checkbox, e.g. privacy policy) --- */
+.consent {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 14px 16px;
+  margin-bottom: 20px;
+  border: 1.5px solid var(--color-ink-200);
+  border-radius: var(--r-md);
+  background: var(--color-white);
+  font-size: 13px;
+  color: var(--color-ink-700);
+  line-height: 1.55;
+  cursor: pointer;
+  transition: border-color 150ms var(--ease-out), background-color 150ms var(--ease-out), box-shadow 150ms var(--ease-out);
+}
+.consent:hover { border-color: var(--color-primary-300); background: var(--color-primary-50); }
+.consent:has(input:checked) { border-color: var(--color-primary-600); background: var(--color-primary-50); }
+.consent:has(input:focus-visible) { border-color: var(--color-primary-600); box-shadow: var(--shadow-glow); }
+.consent input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+.consent .choice__box { margin-top: 2px; }
+.consent input:checked ~ .choice__box {
+  background: var(--color-primary-600);
+  border-color: var(--color-primary-600);
+}
+.consent input:checked ~ .choice__box::after { opacity: 1; transform: rotate(45deg) scale(1); }
+
 /* ============================================================
    Doctor / Hospital cards
    ============================================================ */
@@ -948,6 +1068,9 @@ p  { margin: 0 0 var(--sp-4); }
   .form-field textarea,
   .form-field select { padding: 12px; font-size: 15px; }
   .form-field label { font-size: 13px; }
+  .choice-group { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 8px; }
+  .choice { padding: 9px 12px; font-size: 13.5px; min-height: 42px; }
+  .consent { padding: 12px 14px; font-size: 13px; }
 
   /* In-page TOC: 隐藏（小屏目录改放页面顶部链接 chip 区域，但本设计的小屏 TOC 父 grid 会变 1 列） */
   .toc { display: none; }

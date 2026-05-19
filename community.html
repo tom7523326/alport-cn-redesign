@@ -174,13 +174,13 @@
 
         <div class="form-field">
           <label>你最希望从社群获得 *（可多选）</label>
-          <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:8px">
-            <label style="display:flex;gap:6px;font-size:14px"><input type="checkbox"> 经验分享</label>
-            <label style="display:flex;gap:6px;font-size:14px"><input type="checkbox"> 就医建议</label>
-            <label style="display:flex;gap:6px;font-size:14px"><input type="checkbox"> 心理支持</label>
-            <label style="display:flex;gap:6px;font-size:14px"><input type="checkbox"> 临床试验信息</label>
-            <label style="display:flex;gap:6px;font-size:14px"><input type="checkbox"> 同龄朋友</label>
-            <label style="display:flex;gap:6px;font-size:14px"><input type="checkbox"> 公益资源</label>
+          <div class="choice-group" role="group" aria-label="希望从社群获得">
+            <label class="choice"><input type="checkbox" name="need" value="experience"><span class="choice__box"></span><span class="choice__label">经验分享</span></label>
+            <label class="choice"><input type="checkbox" name="need" value="medical"><span class="choice__box"></span><span class="choice__label">就医建议</span></label>
+            <label class="choice"><input type="checkbox" name="need" value="psych"><span class="choice__box"></span><span class="choice__label">心理支持</span></label>
+            <label class="choice"><input type="checkbox" name="need" value="trial"><span class="choice__box"></span><span class="choice__label">临床试验信息</span></label>
+            <label class="choice"><input type="checkbox" name="need" value="peers"><span class="choice__box"></span><span class="choice__label">同龄朋友</span></label>
+            <label class="choice"><input type="checkbox" name="need" value="resources"><span class="choice__box"></span><span class="choice__label">公益资源</span></label>
           </div>
         </div>
 
@@ -190,8 +190,9 @@
           <div class="hint">仅协会管理员可见</div>
         </div>
 
-        <label style="display:flex;gap:8px;font-size:14px;color:var(--color-ink-600);margin-bottom:24px">
-          <input type="checkbox" required style="margin-top:3px">
+        <label class="consent">
+          <input type="checkbox" required>
+          <span class="choice__box"></span>
           <span>我已阅读《社群公约》与《隐私政策》，同意接受协会的志愿者联系。</span>
         </label>
 

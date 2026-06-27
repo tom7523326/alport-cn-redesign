@@ -11,10 +11,10 @@
     { href: 'about-alport.html', label: '关于 Alport', id: 'disease' },
     { href: 'doctors.html', label: '医患平台', id: 'doctors' },
     { href: 'research.html', label: '科研进展', id: 'research' },
+    { href: 'news.html', label: '协会动态', id: 'news' },
     { href: 'community.html', label: '患者社区', id: 'community' },
     { href: 'about-us.html', label: '关于协会', id: 'about' },
-    { href: 'get-involved.html', label: '加入我们', id: 'join' },
-    { href: 'news.html', label: '协会动态', id: 'news' }
+    { href: 'get-involved.html', label: '加入我们', id: 'join' }
   ];
 
   function buildHeader(activeId) {

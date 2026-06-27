@@ -11,6 +11,7 @@
     { href: 'about-alport.html', label: '关于 Alport', id: 'disease' },
     { href: 'doctors.html', label: '医患平台', id: 'doctors' },
     { href: 'research.html', label: '科研进展', id: 'research' },
+    { href: 'news.html', label: '协会动态', id: 'news' },
     { href: 'community.html', label: '患者社区', id: 'community' },
     { href: 'about-us.html', label: '关于协会', id: 'about' },
     { href: 'get-involved.html', label: '加入我们', id: 'join' }
@@ -90,6 +91,7 @@
             </div>
             <div>
               <h4>参与协会</h4>
+              <a href="news.html">协会动态</a>
               <a href="community.html">患者社区</a>
               <a href="get-involved.html#register">患者登记</a>
               <a href="get-involved.html#volunteer">志愿者招募</a>
@@ -186,7 +188,10 @@
       btns.forEach(b => b.addEventListener('click', () => {
         const id = b.dataset.tab;
         btns.forEach(x => x.classList.toggle('is-active', x === b));
-        panels.forEach(p => p.style.display = p.dataset.tabPanel === id ? '' : 'none');
+        panels.forEach(p => {
+          const cats = (p.dataset.tabPanel || '').split(/\s+/);
+          p.style.display = cats.includes(id) ? '' : 'none';
+        });
       }));
     });
 

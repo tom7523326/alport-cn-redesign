@@ -18,7 +18,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;600;700&family=Noto+Serif+SC:wght@500;600;700;800&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="css/design-system.css?v=2">
+<link rel="stylesheet" href="css/design-system.css?v=3">
 
 <!-- JSON-LD: 组织信息（提高搜索结果可信度） -->
 <script type="application/ld+json">
@@ -139,17 +139,18 @@
   gap: clamp(20px, 4vw, 56px);
   margin-top: 56px;
   padding-top: 40px;
-  border-top: 1px solid rgba(30, 64, 175, .12);
+  border-top: 1px solid rgba(255, 255, 255, .18);
   font-size: 14px;
-  color: var(--color-ink-600);
+  color: rgba(255, 255, 255, .85);
   flex-wrap: wrap;
   position: relative;
   z-index: 2;
 }
 .hero-stats > div { text-align: left; }
-.hero-stats strong { display: block; font-family: var(--font-num); font-size: 32px; color: var(--color-primary-700); font-weight: 800; line-height: 1; margin-bottom: 6px; letter-spacing: -.02em; }
-.hero-stats .u { font-size: 14px; color: var(--color-ink-500); font-weight: 600; margin-left: 2px; }
-.hero-stats .sep { width: 1px; height: 32px; background: var(--color-ink-200); }
+.hero-stats strong { display: block; font-family: var(--font-num); font-size: 32px; color: #fff; font-weight: 800; line-height: 1; margin-bottom: 6px; letter-spacing: -.02em; text-shadow: 0 2px 16px rgba(0,0,0,.3); }
+.hero-stats .u { font-size: 14px; color: rgba(255, 255, 255, .72); font-weight: 600; margin-left: 2px; }
+.hero-stats .sep { width: 1px; height: 32px; background: rgba(255, 255, 255, .25); }
+.hero-v2 .lead strong { color: #FFE4B5; font-weight: 700; }
 
 @media (max-width: 900px) {
   .hero-cards { grid-template-columns: 1fr; }

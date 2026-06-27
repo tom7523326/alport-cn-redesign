@@ -28,12 +28,8 @@
     return `
       <header class="navbar" role="banner">
         <div class="container nav-inner">
-          <a class="nav-brand" href="index.html" aria-label="返回首页">
-            <span class="nav-brand-logo" aria-hidden="true">A</span>
-            <span class="nav-brand-text">
-              <span class="nav-brand-cn">中国 Alport 综合征家长协会</span>
-              <span class="nav-brand-en">CHINA ALPORT SYNDROME ASSOCIATION</span>
-            </span>
+          <a class="nav-brand" href="index.html" aria-label="返回首页 · 中国 Alport 综合征家长协会">
+            <img class="nav-brand-img" src="assets/images/logo.png" alt="中国 Alport 综合征家长协会" width="311" height="60" decoding="async">
           </a>
           <nav aria-label="主导航">
             <ul class="nav-links">${links}</ul>
@@ -65,12 +61,8 @@
         <div class="container">
           <div class="footer-top">
             <div class="footer-brand">
-              <a class="nav-brand" href="index.html">
-                <span class="nav-brand-logo" aria-hidden="true">A</span>
-                <span class="nav-brand-text">
-                  <span class="nav-brand-cn">中国 Alport 综合征家长协会</span>
-                  <span class="nav-brand-en">CHINA ALPORT SYNDROME ASSOCIATION</span>
-                </span>
+              <a class="nav-brand nav-brand-footer" href="index.html" aria-label="中国 Alport 综合征家长协会">
+                <img class="nav-brand-img" src="assets/images/logo.png" alt="中国 Alport 综合征家长协会" width="311" height="60" decoding="async">
               </a>
               <p>我们是国内规模最大、影响力最广的 Alport 综合征患者组织。蓝天下，你我同行 —— 用专业凝聚力量，用温度传递希望。</p>
               <div class="footer-social" aria-label="社交媒体">
